@@ -17,7 +17,6 @@
     <button type="submit" class="filtreBtn">PHP</button>
 
     <h1>Travaux</h1>
-    <h2>A propos de moi</h2>
 
     <a href="" class="cardTravauxLien cardTravauxLienActive">
         <div class="cardTravaux">
@@ -68,19 +67,26 @@
     <!-- *** MENU *** -->
     <nav>
         <div class="cross">
-            <span id="cross">
+            <span id="crossX" onclick="crossResponsive()">
                 <img src="images/icons/cross.png" alt="Fermer">
             </span>
         </div>
-        <div class="divOne">
+        <div class="divOne" id="divOne">
             <button type="submit" class="navBtn navResponsive"><a href="#apropos">A propos</a></button>
             <button type="submit" class="navBtn navResponsive"><a href="#travaux">Travaux</a></button>
             <button type="submit" class="navBtn navResponsive"><a href="#competences">Compétences</a></button>
         </div>
-        <div class="divTwo">
+        <div class="divTwo" id="divTwo">
             <button type="submit" class="navBtn navResponsive"><a href="#contact">Contact</a></button>
         </div>
     </nav>
+    
+    <!-- *** A PROPOS *** -->
+    <section class="apropos" id="apropos">
+        <div class="container">
+            <h2>A propos de moi</h2>
+        </div>
+    </section>
     
     <!-- *** SCRIPT *** -->
      <script src="js/script.js"></script>

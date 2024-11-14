@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+    // MENU
+    nav {
+        height: 100px;
+        flex-direction: row;
+        padding: 0;
+
+        .divOne {
+            border: 1px solid red;
+            width: 70%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+            padding: 0 30px;
+        }
+
+        .divTwo {
+            border: 1px solid red;
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-top: 0px;
+            padding: 0 30px;
+        }
+    }
+}

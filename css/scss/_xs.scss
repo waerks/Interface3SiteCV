@@ -7,8 +7,12 @@
     }
 
     body {
-        margin: auto 0;
-        margin-bottom: 100px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background-color: $background;
     }
 
@@ -352,5 +356,10 @@
             align-items: center;
             padding-top: 30px;
         }
+    }
+
+    // A PROPOS
+    .apropos {
+        width: 100%;
     }
 }
