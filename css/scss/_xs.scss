@@ -1,0 +1,356 @@
+@media (min-width: 0) {
+    // BODY
+    * {
+        box-sizing: border-box;
+        color: $text;
+        font-family: "Nunito Sans", sans-serif;
+    }
+
+    body {
+        margin: auto 0;
+        margin-bottom: 100px;
+        background-color: $background;
+    }
+
+    // ASSETS
+    .navBtn {
+        width: 150px;
+        height: 35px;
+        background-color: white;
+        border-radius: 50px;
+
+        border: 1px solid black;
+        box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+        -webkit-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+        -moz-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+
+        a {
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $primary;
+        }
+    }
+
+    .navBtnActive {
+        background-color: $primary;
+    }
+
+    .navResponsive {
+        width: 90%;
+    }
+
+    .filtreBtn {
+        width: 150px;
+        height: 35px;
+        background-color: white;
+        border-radius: 50px;
+
+        border: 1px solid black;
+        box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+        -webkit-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+        -moz-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $secondary;
+        }
+    }
+
+    .filtreBtnActive {
+        background-color: $secondary;
+    }
+
+    .lienTravaux, .lienAccordeon {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 50px;
+
+        border: 1px solid black;
+        box-shadow: 1px 1px 0 1px rgba(0,0,0,1);
+        -webkit-box-shadow: 1px 1px 0 1px rgba(0,0,0,1);
+        -moz-box-shadow: 1px 1px 0 1px rgba(0,0,0,1);
+
+        img {
+            object-fit: contain;
+            width: 70%;
+            height: 70%;
+            transition: all 0.2s ease;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $secondary;
+        }
+    }
+
+    .lienTravauxActive {
+        background-color: $secondary;
+    }
+
+    .categorieBtn {
+        width: 100px;
+        height: 25px;
+        background-color: $accent;
+        border-radius: 50px;
+
+        border: 1px solid black;
+        box-shadow: 1px 1px 0 1px rgba(0,0,0,1);
+        -webkit-box-shadow: 1px 1px 0 1px rgba(0,0,0,1);
+        -moz-box-shadow: 1px 1px 0 1px rgba(0,0,0,1);
+
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .cardTravauxLien {
+        height: 465px;
+        display: flex;
+        text-decoration: none;
+
+        .cardTravaux {
+            width: 560px;
+            height: 465px;
+            border-radius: 50px;
+            position: relative;
+    
+            border: 1px solid black;
+            box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+            -webkit-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+            -moz-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+
+            .divOne {
+                height: 385px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                border-radius: 50px;
+                padding: 35px 50px;
+            }
+
+            .divTwo {
+                height: 80px;
+                width: 100%;
+                border-radius: 50px;
+                padding: 0px 35px;
+            }
+
+            .imgTravaux {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border-radius: 50px;
+                z-index: -1;
+            }
+        }
+
+        &:hover {
+            .cardTravaux {
+
+                .divOne {
+
+                    .lienTravaux {
+                        background-color: $secondary;
+
+                        img {
+                            transform: rotate(-45deg);
+                            transition: all 0.2s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:focus-visible {
+            border-radius: 50px;
+        }
+    }
+
+    .cardTravauxLienActive {
+        width: 560px;
+    }
+
+    .cardTravauxLienNotActive {
+        width: 350px;
+        filter: grayscale(80%);
+        transition: all 0.5s ease;
+
+        &:hover {
+            width: 560px;
+            filter: grayscale(0%);
+            transition: all 0.5s ease;
+        }
+    }
+
+    .cardAccordeon {
+        width: 80%;
+        background-color: white;
+        border-radius: 50px;
+        transition: all 0.5s ease;
+
+        .divOne, .divTwo {
+            height: 150px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 50px;
+            padding: 50px;
+        }
+
+        .divTwo {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 30px;
+            padding-top: 20px;
+        }
+
+        border: 1px solid black;
+        box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+        -webkit-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+        -moz-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+
+        &:hover {
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            .divOne {
+
+                .lienAccordeon {
+                    background-color: $secondary;
+
+                    img {
+                        transform: rotate(45deg);
+                        transition: all 0.2s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    .cardAccordeonNotActive {
+        height: 150px;
+        overflow-y: hidden;
+
+        &:hover {
+            height: 180px;
+        }
+    }
+
+    .cardAccordeonActive {
+        height: 300px;
+
+        .divOne {
+
+            .lienAccordeon {
+                background-color: $secondary;
+
+                img {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+
+    h1 {
+        color: white;
+        text-shadow: -1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 3px 3px 0 #000;
+        font-size: 72px;
+    }
+
+    h2 {
+        color: white;
+        text-shadow: -1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 3px 3px 0 #000;
+        font-size: 48px;
+    }
+
+    h3 {
+        color: white;
+        text-shadow: -1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 3px 3px 0 #000;
+        font-size: 32px;
+    }
+
+    h4 {
+        color: white;
+        text-shadow: -1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 3px 3px 0 #000;
+        font-size: 24px;
+        margin: 0;
+    }
+
+    // MENU
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 35px;
+
+        .cross {
+            border: 1px solid red;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding-right: 5%;
+            padding-bottom: 20px;
+
+            span {
+                height: 40px;
+                width: 40px;
+
+                img {
+                    cursor: pointer;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    transform: rotate(45deg);
+                    transition: all 0.5s ease;
+                }
+
+                &:hover {
+                    
+                    img {
+                        transform: rotate(0deg);
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+
+        .divOne {
+            border: 1px solid red;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .divTwo {
+            border: 1px solid red;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+        }
+    }
+}
