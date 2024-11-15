@@ -4,11 +4,12 @@
         box-sizing: border-box;
         color: $text;
         font-family: "Nunito Sans", sans-serif;
+        scroll-behavior: smooth;
     }
 
     body {
         margin: 0 auto;
-        margin-bottom: 50px;
+        margin-bottom: 200px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -305,6 +306,23 @@
         }
     }
 
+    .input {
+        width: 100%;
+        height: 35px;
+        padding-left: 15px;
+        background-color: white;
+        border-radius: 50px;
+
+        border: 1px solid black;
+        box-shadow: 1px 1px 0 1px rgba(0,0,0,1);
+        -webkit-box-shadow: 1px 1px 0 1px rgba(0,0,0,1);
+        -moz-box-shadow: 1px 1px 0 1px rgba(0,0,0,1);
+
+        &:focus-visible {
+            border-radius: 50px;
+        }
+    }
+
 
     h1 {
         color: white;
@@ -397,6 +415,14 @@
     }
 
     // HOME
+    .accueil {
+        height: 800px;
+        width: 100%;
+        background-image: url("../images/travaux/test.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
     // A PROPOS
     .apropos {
@@ -536,6 +562,75 @@
                 align-items: center;
                 gap: 20px;
             }
+        }
+    }
+
+    .contact {
+        width: 100%;
+        padding: 35px;
+        background-color: $primary;
+        border-radius: 50px;
+        padding-bottom: 200px;
+        position: relative;
+        
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .divForm {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 20px;
+                
+                form {
+                    width: 100%;
+
+                    label {
+                        font-size: 18px;
+                        font-weight: 700;
+                        padding-left: 15px;
+                    }
+
+                    input {
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                    }
+
+                    textarea {
+                        margin-top: 10px;
+                        min-height: 300px;
+                    }
+                }
+            }
+        }
+
+        .contactLien {
+            height: 300px;
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 35px;
+            gap: 20px;
+            background-color: white;
+            border-radius: 50px;
+
+            border: 1px solid black;
+            box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+            -webkit-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+            -moz-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+
+            position: absolute;
+            bottom: -150px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }

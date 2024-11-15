@@ -76,7 +76,8 @@ document.querySelectorAll('.cardTravauxLien').forEach(card => {
 
 document.querySelectorAll('.cardTravauxLien').forEach(card => {
     card.addEventListener('click', (event) => {
-        event.preventDefault(); // Empêche le comportement par défaut du lien
+        // Supprimer cette ligne pour autoriser le comportement par défaut du lien
+        // event.preventDefault(); 
 
         // Retire la classe `cardTravauxLienActive` de l'ancienne carte active
         document.querySelector('.cardTravauxLienActive')?.classList.remove('cardTravauxLienActive');
