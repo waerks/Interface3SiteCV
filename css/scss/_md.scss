@@ -43,6 +43,34 @@
         }
     }
 
+    // TRAVAUX
+    .travaux {
+        width: 100%;
+        padding: 35px;
+        
+        .container {
+            width: 100%;
+
+            .divFiltre {
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+
+                div {
+
+                    &:first-child {
+                        width: 80%;
+                    }
+
+                    &:last-child {
+                        width: 20%;
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+    }
+
     // CONTACT
     .contact {
         padding-bottom: 120px;
