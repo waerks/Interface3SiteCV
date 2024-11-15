@@ -4,9 +4,11 @@
         height: 100px;
         flex-direction: row;
         padding: 0;
+        border: none;
+        box-shadow: none;
+        background-color: $background;
 
         .divOne {
-            border: 1px solid red;
             width: 70%;
             display: flex;
             flex-wrap: nowrap;
@@ -17,7 +19,6 @@
         }
 
         .divTwo {
-            border: 1px solid red;
             width: 30%;
             display: flex;
             justify-content: flex-end;

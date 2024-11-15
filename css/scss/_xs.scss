@@ -14,6 +14,32 @@
         justify-content: center;
         align-items: center;
         background-color: $background;
+
+        --sb-track-color: $background;
+        --sb-thumb-color: #000000;
+        --sb-size: 5px;
+    }
+    
+    body::-webkit-scrollbar {
+        width: var(--sb-size)
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: var(--sb-track-color);
+        border-radius: 10px;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: var(--sb-thumb-color);
+        border-radius: 10px;
+        
+    }
+    
+    @supports not selector(::-webkit-scrollbar) {
+        body {
+        scrollbar-color: var(--sb-thumb-color)
+                        var(--sb-track-color);
+        }
     }
 
     // ASSETS
@@ -105,7 +131,7 @@
     }
 
     .categorieBtn {
-        width: 100px;
+        min-width: 100px;
         height: 25px;
         background-color: $accent;
         border-radius: 50px;
@@ -148,8 +174,10 @@
             .divTwo {
                 height: 80px;
                 width: 100%;
+                display: flex;
                 border-radius: 50px;
                 padding: 0px 35px;
+                gap: 15px;
             }
 
             .imgTravaux {
@@ -201,19 +229,22 @@
     }
 
     .cardAccordeon {
-        width: 80%;
+        width: 90%;
         background-color: white;
         border-radius: 50px;
         transition: all 0.5s ease;
 
         .divOne, .divTwo {
-            height: 150px;
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-radius: 50px;
             padding: 50px;
+        }
+
+        .divOne {
+            height: 150px;
         }
 
         .divTwo {
@@ -247,16 +278,16 @@
     }
 
     .cardAccordeonNotActive {
-        height: 150px;
+        max-height: 150px;
         overflow-y: hidden;
 
         &:hover {
-            height: 180px;
+            max-height: 180px;
         }
     }
 
     .cardAccordeonActive {
-        height: 300px;
+        max-height: 800px;
 
         .divOne {
 
@@ -268,19 +299,23 @@
                 }
             }
         }
+
+        .divTwo {
+            min-height: 150px;
+        }
     }
 
 
     h1 {
         color: white;
         text-shadow: -1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 3px 3px 0 #000;
-        font-size: 72px;
+        font-size: 56px;
     }
 
     h2 {
         color: white;
         text-shadow: -1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 3px 3px 0 #000;
-        font-size: 48px;
+        font-size: 42px;
     }
 
     h3 {
@@ -303,17 +338,21 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 35px;
+        background-color: white;
+        border-radius: 50px;
+
+        border: 1px solid black;
+        box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+        -webkit-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+        -moz-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
 
         .cross {
-            border: 1px solid red;
-            height: 100%;
+            height: 60px;
             width: 100%;
             display: flex;
             justify-content: flex-end;
-            align-items: flex-end;
+            align-items: center;
             padding-right: 5%;
-            padding-bottom: 20px;
 
             span {
                 height: 40px;
@@ -339,7 +378,6 @@
         }
 
         .divOne {
-            border: 1px solid red;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -349,17 +387,155 @@
         }
 
         .divTwo {
-            border: 1px solid red;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             padding-top: 30px;
+            padding-bottom: 20px;
         }
     }
+
+    // HOME
 
     // A PROPOS
     .apropos {
         width: 100%;
+        padding: 35px;
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .divInfos {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .profilTexte {
+                    padding: 15px;
+                    padding-top: 0;
+                }
+    
+                .profilImg {
+                    width: 100%;
+                    max-width: 350px;
+                    height: 350px;
+                    border-radius: 50px;
+    
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50px;
+
+                        border: 1px solid black;
+                        box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+                        -webkit-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+                        -moz-box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
+                    }
+                }
+            }
+        }
+    }
+
+    // TRAVAUX
+    .travaux {
+        width: 100%;
+        padding: 35px;
+        
+        .container {
+            width: 100%;
+
+            .divFiltre {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                div {
+
+                    &:first-child {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 20px;
+                        padding: 10px;
+                    }
+
+                    &:last-child {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .divCards {
+                overflow-x: scroll;
+                display: flex;
+                padding: 10px;
+                gap: 20px;
+
+                --sb-track-color: $background;
+                --sb-thumb-color: #000000;
+                --sb-size: 5px;
+            }
+            
+            .divCards::-webkit-scrollbar {
+                width: 20px;
+                height: var(--sb-size);
+            }
+            
+            .divCards::-webkit-scrollbar-track {
+                background: var(--sb-track-color);
+                border-radius: 10px;
+            }
+            
+            .divCards::-webkit-scrollbar-thumb {
+                background: var(--sb-thumb-color);
+                border-radius: 10px;
+                
+            }
+            
+            @supports not selector(::-webkit-scrollbar) {
+                .divCards {
+                scrollbar-color: var(--sb-thumb-color)
+                                var(--sb-track-color);
+                }
+            }
+        }
+    }
+
+    // COMPETENCES
+    .competences {
+        width: 100%;
+        padding: 35px;
+        
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            
+            h1 {
+                text-align: end;
+            }
+            
+            .divAccordeons {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+        }
     }
 }
