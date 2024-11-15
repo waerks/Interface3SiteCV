@@ -358,6 +358,7 @@
         align-items: center;
         background-color: white;
         border-radius: 50px;
+        margin-bottom: 10px;
 
         border: 1px solid black;
         box-shadow: 2px 2px 0 2px rgba(0,0,0,1);
@@ -551,7 +552,7 @@
             align-items: flex-end;
             
             h1 {
-                text-align: end;
+                text-align: start;
             }
             
             .divAccordeons {

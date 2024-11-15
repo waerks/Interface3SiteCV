@@ -27,4 +27,36 @@
             padding: 0 30px;
         }
     }
+
+    // A PROPOS
+    .apropos {
+
+        .container {
+
+            .divInfos {
+                flex-direction: row;
+
+                .profilTexte {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+
+    // CONTACT
+    .contact {
+        padding-bottom: 120px;
+
+        .container {
+
+            .divForm {
+                width: 80%;
+            }
+        }
+
+        .contactLien {
+            height: 150px;
+            bottom: -75px;
+        }
+    }
 }
