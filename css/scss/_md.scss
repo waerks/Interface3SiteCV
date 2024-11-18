@@ -35,9 +35,14 @@
 
             .divInfos {
                 flex-direction: row;
+                justify-content: space-around;
 
                 .profilTexte {
                     max-width: 400px;
+
+                    p {
+                        font-size: 18px;
+                    }
                 }
             }
         }
