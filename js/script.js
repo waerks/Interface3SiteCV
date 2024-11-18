@@ -145,3 +145,42 @@ accordeons.forEach(accordeon => {
         }
     });
 });
+
+// BOUTONS ACTIVE //
+document.addEventListener("DOMContentLoaded", () => {
+    // Boutons du menu de navigation
+    const navButtons = document.querySelectorAll(".navBtn");
+    // Boutons des filtres
+    const filtreButtons = document.querySelectorAll(".filtreBtn");
+    // Boutons des liens travaux
+    const lienTravauxLinks = document.querySelectorAll(".cardTravauxLien");
+
+    // Fonction pour activer une classe et désactiver les autres
+    function toggleActiveClass(buttons, activeClass, clickedButton) {
+        buttons.forEach((btn) => {
+            btn.classList.remove(activeClass);
+        });
+        clickedButton.classList.add(activeClass);
+    }
+
+    // Gestion des clics pour les boutons de navigation
+    navButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            toggleActiveClass(navButtons, "navBtnActive", button);
+        });
+    });
+
+    // Gestion des clics pour les filtres
+    filtreButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            toggleActiveClass(filtreButtons, "filtreBtnActive", button);
+        });
+    });
+
+    // Gestion des clics pour les liens travaux
+    lienTravauxLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            toggleActiveClass(lienTravauxLinks, "lienTravauxActive", link);
+        });
+    });
+});
