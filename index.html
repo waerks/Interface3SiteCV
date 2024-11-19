@@ -247,15 +247,15 @@
         <div class="container">
             <h1>Contactez-&nbsp;moi</h1>
             <div class="divForm">
-                <form action="" method="post">
+                <form action="" method="post" id="contactForm">
                     <label for="name">Nom & Prénom</label>
                     <input type="text" placeholder="Aerts Anaïs" class="input">
                     <label for="email">Adresse mail</label>
                     <input type="email" placeholder="anais.aerts@gmail.com" class="input">
                     <label for="message">Votre message</label>
                     <textarea name="message" id="message" class="input"></textarea>
+                    <button type="submit" id="submitBtn" class="filtreBtn">Envoyer</button>
                 </form>
-                <button type="submit" class="filtreBtn">Envoyer</button>
             </div>
             <div class="contactLien">
                 <button type="submit" class="filtreBtn"><a href="" target="_blank">CV</a></button>
@@ -267,5 +267,11 @@
 
     <!-- *** SCRIPT *** -->
      <script src="js/script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("Lmh1x7y1u2-iD_9SO"); // Remplacez par votre ID utilisateur EmailJS
+        })();
+    </script>
 </body>
 </html>

@@ -4,11 +4,7 @@
         height: 100px;
         flex-direction: row;
         padding: 0;
-        border: none;
-        box-shadow: none;
-        background: rgb(252,244,231);
-        background: linear-gradient(0deg, rgba(252,244,231,0) 0%, rgba(252,244,231,1) 20%);
-        border-radius: 0;
+        background: $background;
 
         .divOne {
             width: 70%;

@@ -184,3 +184,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// ENVOI DE MAIL //
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Empêche le rechargement de la page
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+        };
+
+        emailjs.send('service_3asota7', 'template_kwsv6y6', formData)
+            .then(() => {
+                alert('Votre message a été envoyé avec succès !');
+                document.getElementById('contactForm').reset(); // Réinitialise le formulaire
+            })
+            .catch((error) => {
+                console.error('Erreur lors de l\'envoi de l\'e-mail:', error);
+                alert('Une erreur est survenue. Veuillez réessayer.');
+            });
+    });
+});

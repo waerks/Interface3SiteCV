@@ -21,6 +21,9 @@
         --sb-size: 5px;
 
         position: relative;
+
+        background: rgb(245,189,152);
+        background: linear-gradient(180deg, rgba(245,189,152,0.7) 0%, rgba(252,244,231,1) 50%);
     }
     
     body::-webkit-scrollbar {
@@ -430,8 +433,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgb(245,189,152);
-        background: radial-gradient(circle, rgba(245,189,152,1) 0%, rgba(245,189,152,0.5) 30%, rgba(252,244,231,1) 100%);
 
         img {
             object-fit: contain;
@@ -623,6 +624,7 @@
                     textarea {
                         margin-top: 10px;
                         min-height: 300px;
+                        padding: 15px 0 0 15px;
                     }
                 }
             }
